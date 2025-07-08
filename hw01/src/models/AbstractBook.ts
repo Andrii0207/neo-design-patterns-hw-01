@@ -19,6 +19,10 @@ export abstract class AbstractBook {
   getYear(): number {
     return this.year;
   }
+
+  getAuthor(): Author {
+    return this.author;
+  }
   
   abstract getDescription(): string
 

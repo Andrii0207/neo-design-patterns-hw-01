@@ -1,3 +1,6 @@
+import { AbstractBook } from "./AbstractBook";
+import { Book } from "./Book";
+
 export class Author {
   private name: string;
   private booklist: string[] = [];
@@ -10,8 +13,8 @@ export class Author {
     return this.name;
   }
 
-  addBook(book: string): void {
-    this.booklist.push(book);
+  addBook(book: AbstractBook): void {
+    this.booklist.push(book.getTitle());
   }
 
   getBooks(): string[] {
